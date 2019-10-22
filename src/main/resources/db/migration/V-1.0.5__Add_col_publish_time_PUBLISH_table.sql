@@ -1,0 +1,1 @@
+ALTER TABLE PUBLISH ADD publish_time date NULL;

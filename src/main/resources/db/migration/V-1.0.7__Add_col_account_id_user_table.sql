@@ -1,0 +1,1 @@
+ALTER TABLE USER ADD account_id long NULL;

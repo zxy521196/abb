@@ -1,0 +1,48 @@
+.body{
+    background-color: #f1f1f1;
+}
+.main{
+    margin: 30px;
+    background-color: white;
+}
+.btn-publish{
+    float: right;
+    margin-bottom: 15px;
+}
+.text-color{
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+.img{
+    width: 42px;
+}
+.h4{
+    cursor: pointer;
+    color: #155faa;
+}
+.myself{
+    margin-top: 13px;
+}
+.em-question{
+    color: #999;
+    font-size: 12px;
+}
+.content{
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+    word-wrap: break-word !important;
+}
+dt,dd{
+    line-height: 1.42857143;
+}
+.pull-left{
+    float: left!important;
+}
+.user-name{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: normal;
+}
