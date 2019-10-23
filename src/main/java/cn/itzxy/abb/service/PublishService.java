@@ -2,6 +2,7 @@ package cn.itzxy.abb.service;
 
 import cn.itzxy.abb.dto.PageDto;
 import cn.itzxy.abb.dto.PublishDto;
+import cn.itzxy.abb.exception.ExceptionBean;
 import cn.itzxy.abb.mapper.PublishMapper;
 import cn.itzxy.abb.mapper.UserMapper;
 import cn.itzxy.abb.model.Publish;
@@ -44,6 +45,9 @@ public class PublishService {
         Publish publishById=null;
         if(id!=null) {
             publishById = publishMapper.findById(id);
+            if(publishById==null){
+                throw new ExceptionBean("对不起，你查找的问题不存在！！");
+            }
         }
         if(publishById==null){
             publishMapper.insert(publish);

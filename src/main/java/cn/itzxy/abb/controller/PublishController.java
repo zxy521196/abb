@@ -1,5 +1,6 @@
 package cn.itzxy.abb.controller;
 
+import cn.itzxy.abb.exception.ExceptionBean;
 import cn.itzxy.abb.mapper.PublishMapper;
 import cn.itzxy.abb.mapper.UserMapper;
 import cn.itzxy.abb.model.Publish;
@@ -30,6 +31,9 @@ public class PublishController {
     public String publish(@PathVariable("id") int id,
                           Model model){
         Publish publish = publishMapper.findById(id);
+        if(publish==null){
+            throw new ExceptionBean("对不起，你查找的问题不存在！");
+        }
         model.addAttribute("title", publish.getTitle());
         model.addAttribute("body",publish.getBody());
         model.addAttribute("tag",publish.getTag());
