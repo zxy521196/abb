@@ -20,8 +20,6 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class MyselfController {
     @Autowired
-    private UserMapper userMapper;
-    @Autowired
     private MyQuestionService myQuestionService;
     @RequestMapping("/my/{title}")
     public String my(HttpServletRequest request,

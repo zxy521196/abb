@@ -45,6 +45,8 @@ public class MyQuestionService {
 
     public PublishDto findByid(int id) {
         Publish publish = publishMapper.findById(id);
+        publish.setView_count(publish.getView_count()+1);
+        publishMapper.update(publish);
         PublishDto publishDto=new PublishDto();
         BeanUtils.copyProperties(publish,publishDto);
         User user = userMapper.selectByPrimaryKey(publish.getUid());

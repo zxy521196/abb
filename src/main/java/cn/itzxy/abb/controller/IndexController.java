@@ -22,12 +22,9 @@ import java.util.List;
 @Controller
 public class IndexController {
     @Autowired
-    private UserMapper userMapper;
-    @Autowired
     private PublishService publishService;
     @RequestMapping(value="/index")
-    public String index(HttpServletRequest request,
-                        Model model,
+    public String index(Model model,
                         @RequestParam(value = "page",defaultValue = "1") int page,
                         @RequestParam(value = "size",defaultValue = "7") int size){
         PageDto pageDto = publishService.publishDtoList(page, size);

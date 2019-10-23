@@ -23,6 +23,6 @@ public interface PublishMapper {
     Integer getMyquestionCount(@Param("uid") int uid);
     @Select("select * from publish where id=#{id}")
     Publish findById(@Param("id") int id);
-    @Update("update publish set title=#{title},body=#{body},tag=#{tag},publish_time=#{publish_time} where id=#{id}")
-    void update(Publish publish);
+    @Update("update publish set title=#{title},body=#{body},tag=#{tag},publish_time=#{publish_time},view_count=#{view_count},love_count=#{love_count},answer_count=#{answer_count} where id=#{id}")
+    int update(Publish publish);
 }

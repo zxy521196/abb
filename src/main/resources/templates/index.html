@@ -24,11 +24,11 @@
                     <h4 class="h4">
                         <a th:href="@{'/question/'+${publishDto.id}}" th:text="${publishDto.title}"></a>
                     </h4>
-                    <span class="text-color"><span th:text="${publishDto.user.name}"></span>	发起了问题 •
-                        <span th:text="${publishDto.love_count}"></span> 人关注 •
-                        <span th:text="${publishDto.answer_count}"></span> 个回复 •
-                        <span th:text="${publishDto.view_count}"></span> 次浏览 •
-                        <span th:text="${#dates.format(publishDto.publish_time,'yyy-MM-dd')}"></span></span>
+                    <span class="text-color"><span th:text="${publishDto.user.name}"></span>发起了问题 |
+                        <span th:text="${publishDto.love_count}"></span> 人关注 |
+                        <span th:text="${publishDto.answer_count}"></span> 个回复 |
+                        <span th:text="${publishDto.view_count}"></span> 次浏览 |
+                        <span th:text="${#dates.format(publishDto.publish_time,'yyyy-MM-dd HH:mm:ss')}"></span></span>
                 </div>
             </div>
             <nav aria-label="Page navigation">
